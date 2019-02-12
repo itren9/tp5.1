@@ -15,7 +15,9 @@ Route::get('think', function () {
 
 Route::get('hello/:name', 'index/hello');
 
-Route::get('test/:name', 'test/index');
+//Route::get('test/:name', 'test/index');
+Route::get('test/getParam', 'test/getParam');
+
 
 return [
 

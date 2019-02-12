@@ -8,7 +8,7 @@
 
 namespace app\index\controller;
 use think\Controller;
-
+use think\response;
 /**
  * tp5.1中 小结:
 初始化方法从原来的`_initialize`方法更改为`initialize`
@@ -87,6 +87,14 @@ class Test extends Controller
     public function data()
     {
         return 'data';
+    }
+
+        public function getParam()
+    {
+
+        $data = $this->request->param();
+         $array = array('code'=>201,'data'=>'data');
+        return json_encode($array);
     }
 
 }
